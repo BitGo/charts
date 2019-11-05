@@ -347,7 +347,7 @@ initConfigMap: {}
 ## Entries for the MongoDB config file. For documentation of all options, see:
 ##   http://docs.mongodb.org/manual/reference/configuration-options/
 ##
-configmap:
+configmap: {}
 #  # where and how to store data.
 #  storage:
 #    dbPath: /bitnami/mongodb/data/db
