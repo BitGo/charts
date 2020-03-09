@@ -1,7 +1,7 @@
 ## mysql image version
 ## ref: https://hub.docker.com/r/library/mysql/tags/
 ##
-mysqlImage: mysql:5.7.13
+mysqlImage: mysql:5.7.29
 xtraBackupImage: gcr.io/google-samples/xtrabackup:1.0
 
 ## Specify an imagePullPolicy (Required)
@@ -9,6 +9,13 @@ xtraBackupImage: gcr.io/google-samples/xtrabackup:1.0
 ## ref: http://kubernetes.io/docs/user-guide/images/#updating-images
 ##
 imagePullPolicy: IfNotPresent
+
+## String to partially override orangehrm.fullname template (will maintain the release name)
+##
+# nameOverride: ""
+## String to fully override orangehrm.fullname template
+##
+# fullnameOverride: ""
 
 mysqlha:
   replicaCount: 3
