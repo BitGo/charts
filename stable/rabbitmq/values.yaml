@@ -320,11 +320,11 @@ metrics:
   ##      https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#endpoint
   serviceMonitor:
     ## If the operator is installed in your cluster, set to true to create a Service Monitor Entry
-    enabled: false
+    enabled: true
     ## Specify the namespace in which the serviceMonitor resource will be created
     # namespace: ""
     ## Specify the interval at which metrics should be scraped
-    interval: 30s
+    interval: 15s
     ## Specify the timeout after which the scrape is ended
     # scrapeTimeout: 30s
     ## Specify Metric Relabellings to add to the scrape endpoint
