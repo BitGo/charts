@@ -141,6 +141,8 @@ spec:
             mountPath: /app
             readOnly: true
           {{- end }}
+          - name: log-volume
+            mountPath: "{{ .Values.persistence.logPath }}"
         ports:
         - name: epmd
           containerPort: 4369
@@ -327,3 +329,15 @@ spec:
       {{- end }}
       {{- end }}
   {{- end }}
+    - metadata:
+        name: log-volume
+        labels:
+          app: {{ template "rabbitmq.name" . }}
+          release: "{{ .Release.Name }}"
+          heritage: "{{ .Release.Service }}"
+      spec:
+        accessModes:
+          - {{ .Values.persistence.accessMode | quote }}
+        resources:
+            requests:
+              storage: {{ .Values.persistence.size | quote }}

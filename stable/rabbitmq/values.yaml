@@ -215,6 +215,9 @@ persistence:
   # persistence directory, maps to the rabbitmq data directory
   path: /opt/bitnami/rabbitmq/var/lib/rabbitmq
 
+  # log persistence directory, to retain crash logs
+  logPath: /opt/bitnami/rabbitmq/var/log
+
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
