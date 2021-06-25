@@ -21,6 +21,7 @@ ingress:
   enabled: false
   annotations: {}
   path: /
+  pathType: Prefix
   hosts:
     - mailhog.example.com
   tls: []

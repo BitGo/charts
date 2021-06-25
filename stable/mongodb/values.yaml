@@ -276,6 +276,7 @@ ingress:
   hosts:
   - name: mongodb.local
     path: /
+    pathType: Prefix
 
   ## The tls configuration for the ingress
   ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
